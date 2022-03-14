@@ -1,0 +1,2001 @@
+{
+	"info": {
+		"_postman_id": "7990e9c9-6427-4ab1-9cc9-58812dcbeb3c",
+		"name": "Mulesoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Validate",
+			"item": [
+				{
+					"name": "India",
+					"item": [
+						{
+							"name": "Customer",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept-encoding": true,
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_Id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"S10003\",\r\n    \"CompanyCode\": \"RT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Masters/Customer",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Masters",
+										"Customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CartCheckout",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"S10003\",\r\n    \"CompanyCode\": \"RT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Validate/CartCheckout",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Validate",
+										"CartCheckout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_india\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_india\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_india\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "MiddleEast",
+					"item": [
+						{
+							"name": "Customer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"1010004660\",\r\n    \"CompanyCode\": \"1110\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Masters/Customer",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Masters",
+										"Customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CartCheckout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"1010004660\",\r\n    \"CompanyCode\": \"1110\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Validate/CartCheckout",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Validate",
+										"CartCheckout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_middleEast\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_middleEast\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_middleEast\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Turkey",
+					"item": [
+						{
+							"name": "Customer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"0001000853\",\r\n    \"CompanyCode\": \"1000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Masters/Customer",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Masters",
+										"Customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CartCheckout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"0001000853\",\r\n    \"CompanyCode\": \"1000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Validate/CartCheckout",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Validate",
+										"CartCheckout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_turkey\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_turkey\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_turkey\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "India",
+					"item": [
+						{
+							"name": "CustomerCreditDetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"S10003\",\r\n    \"CompanyCode\": \"RT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerCreditDetails",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerCreditDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerParties",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerParties",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerParties"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerSOA",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\",\r\n  \"FromDate\": \"2021-12-01\",\r\n  \"ToDate\": \"2022-02-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerSOA",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerSOA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOutstanding",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\",\r\n  \"KeyDate\": \"2022-02-09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerOutstanding",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerOutstanding"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_india\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_india\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_india\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "MiddleEast",
+					"item": [
+						{
+							"name": "CustomerCreditDetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"1010004660\",\r\n    \"CompanyCode\": \"1110\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerCreditDetails",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerCreditDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerParties",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"1010004660\",\r\n    \"CompanyCode\": \"1110\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerParties",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerParties"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerSOA",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"1010000771\",\r\n    \"CompanyCode\": \"1110\",\r\n    \"FromDate\": \"2021-01-31\",\r\n    \"ToDate\": \"2022-02-23\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerSOA",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerSOA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOutstanding",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"1010004660\",\r\n  \"CompanyCode\": \"1110\",\r\n  \"KeyDate\": \"2022-02-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerOutstanding",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerOutstanding"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_middleEast\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_middleEast\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_middleEast\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Turkey",
+					"item": [
+						{
+							"name": "CustomerCreditDetails",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"0001000853\",\r\n    \"CompanyCode\": \"1000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerCreditDetails",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerCreditDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerParties",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustomerCode\": \"0001000853\",\r\n    \"CompanyCode\": \"1000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerParties",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerParties"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerSOA",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"0001000853\",\r\n  \"CompanyCode\": \"1000\",\r\n  \"FromDate\": \"2014-12-31\",\r\n  \"ToDate\": \"2014-12-31\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerSOA",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerSOA"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerOutstanding",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CustomerCode\": \"0001000853\",\r\n  \"CompanyCode\": \"1000\",\r\n  \"KeyDate\": \"2021-12-31\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Reports/CustomerOutstanding",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Reports",
+										"CustomerOutstanding"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_turkey\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_turkey\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_turkey\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transact",
+			"item": [
+				{
+					"name": "India",
+					"item": [
+						{
+							"name": "PostCustomerInvoiceDoc",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"disabled": true
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n  \"PreInvoiceNo\": \"sample string 1\",\r\n  \"InvoiceNo\": \"sample string 2\",\r\n  \"InvoiceDate\": \"sample string 3\",\r\n  \"SalesOrderNo\": \"sample string 4\",\r\n  \"InvoiceDoc\": \"sample string 5\",\r\n  \"InvoiceValues\": [\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoiceDocument",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoiceDocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n    \"CustInvoiceHeader\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"InvoiceType\": \"Invoice\",\r\n        \"CustomerCode\": \"S21358\",\r\n        \"SoldToCustomerCode\": \"S21358\",\r\n        \"BillToCustomerCode\": \"S21685-000\",\r\n        \"ShipToCustomerCode\": \"S21358-000\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"LPONumber\": \"123edcvfr456789\",\r\n        \"PaymentTermCode\": \"Z030\",\r\n        \"PaymentType\": \"\",\r\n        \"Currency\": \"INR\",\r\n        \"EndCustomer\": {\r\n            \"Name\": \"test2\",\r\n            \"AddressLine1\": \"street1\",\r\n            \"AddressLine2\": \"street2\",\r\n            \"Country\": \"IN\",\r\n            \"City\": \"Bengaluru\",\r\n            \"ContactNo\": \"87654423411\",\r\n            \"EmailId\": \"abc@in.com\"\r\n        },\r\n        \"CustInvoiceItems\": [\r\n            {\r\n                \"ItemId\": \"AWCS0025\",\r\n                \"PartNo\": \"\",\r\n                \"Quantity\": 1,\r\n                \"TotalPrice\": 20.42,\r\n                \"TotalCogs\": 20.42\r\n            }\r\n        ]\r\n    }\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoice"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerUnbilledValue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"disabled": true
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n    \"UnbilledData\": {\r\n        \"CustomerCode\": \"S10003\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"Currency\" : \"INR\",\r\n        \"UnbilledValue\" : 0.123\r\n    }\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerUnbilledValue",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerUnbilledValue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostVendorInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n    \"VendorInvoice\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"VendorInvoiceNo\" : \"123455\",\r\n        \"CompanyCode\" : \"RT\",\r\n        \"CustPreInvoiceNo\" : \"12345612\",\r\n        \"CustomerCode\" : \"S21358\",\r\n        \"InvoiceLongText\" : \"Sample Invoice data for Vendor Invoice\",\r\n        \"Currency\" : \"INR\",\r\n        \"PartNo\" : \"AWCS0025\",\r\n        \"Quantity\" : 1.0,\r\n        \"ActualCogs\" : 20.67\r\n    }\r\n}]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostVendorInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostVendorInvoice"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_india\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_india\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_india\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "MiddleEast",
+					"item": [
+						{
+							"name": "PostCustomerInvoiceDoc",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n  \"PreInvoiceNo\": \"sample string 1\",\r\n  \"InvoiceNo\": \"sample string 2\",\r\n  \"InvoiceDate\": \"sample string 3\",\r\n  \"SalesOrderNo\": \"sample string 4\",\r\n  \"InvoiceDoc\": \"sample string 5\",\r\n  \"InvoiceValues\": [\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}]\r\n"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoiceDocument",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoiceDocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"CustInvoiceHeader\": {\r\n            \"PreInvoiceNo\": \"3001\",\r\n            \"PreInvoiceDate\": \"2022-03-08\",\r\n            \"InvoiceType\": \"INVOICE\",\r\n            \"SoldToCustomerCode\": \"1010000951\",\r\n            \"BillToCustomerCode\": \"\",\r\n            \"ShipToCustomerCode\": \"\",\r\n            \"CompanyCode\": \"1110\",\r\n            \"LPONumber\": \"\",\r\n            \"PaymentTermCode\": \"\",\r\n            \"PaymentType\": \"CREDIT\",\r\n            \"Currency\": \"USD\",\r\n            \"EndCustomer\": {\r\n                \"Name\": \"cqgulfdubaitest\",\r\n                \"AddressLine1\": \"dubai market road\",\r\n                \"AddressLine2\": \".\",\r\n                \"Country\": \"AE\",\r\n                \"City\": \"\",\r\n                \"ContactNo\": \"\",\r\n                \"EmailId\": \"cqgulftest01@mailinator.com\"\r\n            }\r\n        },\r\n        \"CustInvoiceItems\": [\r\n            {\r\n                \"ItemId\": \"10\",\r\n                \"PartNo\": \"ONETIME\",\r\n                \"Quantity\": 1,\r\n                \"TotalPrice\": 85.000,\r\n                \"TotalCogs\": 72.250\r\n            }\r\n        ]\r\n    }\r\n]\r\n"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoice"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerUnbilledValue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n    \"UnbilledData\": {\r\n        \"CustomerCode\": \"\",\r\n        \"CompanyCode\": \"\",\r\n        \"Currency\" : \"\",\r\n        \"UnbilledValue\" : 0.1\r\n    }\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerUnbilledValue",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerUnbilledValue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostVendorInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\r\n    \"VendorInvoice\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"VendorInvoiceNo\" : \"123455\",\r\n        \"CustPreInvoiceNo\" : \"12345612\",\r\n        \"CustomerCode\" : \"S21358\",\r\n        \"InvoiceLongText\" : \"Sample Invoice data for Vendor Invoice\",\r\n        \"Currency\" : \"INR\",\r\n        \"PartNo\" : \"AWCS0025\",\r\n        \"Quantity\" : 1.0,\r\n        \"ActualCogs\" : 20.67\r\n    }\r\n}]"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostVendorInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostVendorInvoice"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_middleEast\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_middleEast\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_middleEast\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Turkey",
+					"item": [
+						{
+							"name": "PostCustomerInvoiceDoc",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"PreInvoiceNo\": \"sample string 1\",\r\n  \"InvoiceNo\": \"sample string 2\",\r\n  \"InvoiceDate\": \"sample string 3\",\r\n  \"SalesOrderNo\": \"sample string 4\",\r\n  \"InvoiceDoc\": \"sample string 5\",\r\n  \"InvoiceValues\": [\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoiceDocument",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoiceDocument"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CustInvoiceHeader\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"InvoiceType\": \"Invoice\",\r\n        \"CustomerCode\": \"S21358\",\r\n        \"SoldToCustomerCode\": \"S21358\",\r\n        \"BillToCustomerCode\": \"S21685-000\",\r\n        \"ShipToCustomerCode\": \"S21358-000\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"LPONumber\": \"123edcvfr456789\",\r\n        \"PaymentTermCode\": \"Z030\",\r\n        \"PaymentType\": \"\",\r\n        \"Currency\": \"INR\",\r\n        \"EndCustomer\": {\r\n            \"Name\": \"test2\",\r\n            \"AddressLine1\": \"street1\",\r\n            \"AddressLine2\": \"street2\",\r\n            \"Country\": \"IN\",\r\n            \"City\": \"Bengaluru\",\r\n            \"ContactNo\": \"87654423411\",\r\n            \"EmailId\": \"abc@in.com\"\r\n        },\r\n        \"CustInvoiceItems\": [\r\n            {\r\n                \"ItemId\": \"AWCS0025\",\r\n                \"PartNo\": \"\",\r\n                \"Quantity\": 1,\r\n                \"TotalPrice\": 20.42,\r\n                \"TotalCogs\": 20.42\r\n            }\r\n        ]\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerInvoice"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostCustomerUnbilledValue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"UnbilledData\": {\r\n        \"CustomerCode\": \"S10003\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"Currency\" : \"INR\",\r\n        \"UnbilledValue\" : \"12345.679\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostCustomerUnbilledValue",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostCustomerUnbilledValue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostVendorInvoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"VendorInvoice\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"VendorInvoiceNo\" : \"123455\",\r\n        \"CustPreInvoiceNo\" : \"12345612\",\r\n        \"CustomerCode\" : \"S21358\",\r\n        \"InvoiceLongText\" : \"Sample Invoice data for Vendor Invoice\",\r\n        \"Currency\" : \"INR\",\r\n        \"PartNo\" : \"AWCS0025\",\r\n        \"Quantity\" : 1.0,\r\n        \"ActualCogs\" : 20.67\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Transact/PostVendorInvoice",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Transact",
+										"PostVendorInvoice"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_turkey\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_turkey\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_turkey\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Masters",
+			"item": [
+				{
+					"name": "India",
+					"item": [
+						{
+							"name": "Lookup",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"disabled": true
+									},
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"LookupFor\": \"paymentterm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Masters/Lookup",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Masters",
+										"Lookup"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_india\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_india\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_india\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "MiddleEast",
+					"item": [
+						{
+							"name": "Lookup",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "client_id",
+										"value": "{{client_id}}",
+										"type": "text"
+									},
+									{
+										"key": "client_secret",
+										"value": "{{client_secret}}",
+										"type": "text"
+									},
+									{
+										"key": "business_partner",
+										"value": "{{business_partner}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"LookupFor\": \"paymentterm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/sys/cloudqx/Masters/Lookup",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"sys",
+										"cloudqx",
+										"Masters",
+										"Lookup"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.collectionVariables.unset(\"client_id\");",
+									"pm.collectionVariables.unset(\"client_secret\");",
+									"pm.collectionVariables.unset(\"business_partner\");",
+									"",
+									"pm.collectionVariables.set(\"client_id\", pm.environment.get(\"ci_middleEast\"));",
+									"pm.collectionVariables.set(\"client_secret\", pm.environment.get(\"cs_middleEast\"));",
+									"pm.collectionVariables.set(\"business_partner\" , pm.environment.get(\"bp_middleEast\") );"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "business_partner",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

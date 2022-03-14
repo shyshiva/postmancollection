@@ -1,0 +1,676 @@
+{
+	"info": {
+		"_postman_id": "fe57114f-a653-4f4d-8239-381082b254af",
+		"name": "ril-edi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Validate",
+			"item": [
+				{
+					"name": "Customer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "clientId",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "ClientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Validate/Customer",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Validate",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CartCheckOut",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "clientID",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "ClientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Validate/CartCheckOut",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Validate",
+								"CartCheckOut"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transact",
+			"item": [
+				{
+					"name": "PostCustomerInvoiceDoc",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"PreInvoiceNo\": \"sample string 1\",\r\n  \"InvoiceNo\": \"sample string 2\",\r\n  \"InvoiceDate\": \"sample string 3\",\r\n  \"SalesOrderNo\": \"sample string 4\",\r\n  \"InvoiceDoc\": \"sample string 5\",\r\n  \"InvoiceValues\": [\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"Currency\": \"sample string 1\",\r\n      \"TotalPrice\": \"sample string 2\",\r\n      \"Tax\": [\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        },\r\n        {\r\n          \"TaxCode\": \"sample string 1\",\r\n          \"TaxPercentage\": \"sample string 2\",\r\n          \"TaxValue\": \"sample string 3\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Transact/PostCustomerInvoiceDocument",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Transact",
+								"PostCustomerInvoiceDocument"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCustomerInvoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "ClientId",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "clientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"CustInvoiceHeader\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"InvoiceType\": \"Invoice\",\r\n        \"CustomerCode\": \"S21358\",\r\n        \"SoldToCustomerCode\": \"S21358\",\r\n        \"BillToCustomerCode\": \"S21685-000\",\r\n        \"ShipToCustomerCode\": \"S21358-000\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"LPONumber\": \"123edcvfr456789\",\r\n        \"PaymentTermCode\": \"Z030\",\r\n        \"PaymentType\": \"\",\r\n        \"Currency\": \"INR\",\r\n        \"EndCustomer\": {\r\n            \"Name\": \"test2\",\r\n            \"AddressLine1\": \"street1\",\r\n            \"AddressLine2\": \"street2\",\r\n            \"Country\": \"IN\",\r\n            \"City\": \"Bengaluru\",\r\n            \"ContactNo\": \"87654423411\",\r\n            \"EmailId\": \"abc@in.com\"\r\n        },\r\n        \"CustInvoiceItems\": [\r\n            {\r\n                \"ItemId\": \"AWCS0025\",\r\n                \"PartNo\": \"\",\r\n                \"Quantity\": 1,\r\n                \"TotalPrice\": 20.42,\r\n                \"TotalCogs\": 20.42\r\n            }\r\n        ]\r\n    }\r\n}\r\n]"
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/{{context}}/api/Transact/PostCustomerInvoice",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{context}}",
+								"api",
+								"Transact",
+								"PostCustomerInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostVendorInvoice",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "ClientId",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "ClientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n    \"VendorInvoice\": {\r\n        \"PreInvoiceNo\": \"123456\",\r\n        \"PreInvoiceDate\": \"2022-03-03\",\r\n        \"VendorInvoiceNo\" : \"123455\",\r\n        \"CompanyCode\" : \"RT\",\r\n        \"CustPreInvoiceNo\" : \"12345612\",\r\n        \"CustomerCode\" : \"S21358\",\r\n        \"InvoiceLongText\" : \"Sample Invoice data for Vendor Invoice\",\r\n        \"Currency\" : \"INR\",\r\n        \"PartNo\" : \"AWCS0025\",\r\n        \"Quantity\" : 1.0,\r\n        \"ActualCogs\" : 20.67\r\n    }\r\n}]"
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/{{context}}/api/Transact/PostVendorInvoice",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{context}}",
+								"api",
+								"Transact",
+								"PostVendorInvoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCustomerUnbilledValue",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "ClientId",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "ClientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"UnbilledData\": {\r\n        \"CustomerCode\": \"S10003\",\r\n        \"CompanyCode\": \"RT\",\r\n        \"Currency\" : \"INR\",\r\n        \"UnbilledValue\" : \"12345.679\"\r\n    }\r\n    }\r\n]\r\n"
+						},
+						"url": {
+							"raw": "https://{{host}}:{{port}}/{{context}}/api/Transact/PostCustomerUnbilledValue",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{context}}",
+								"api",
+								"Transact",
+								"PostCustomerUnbilledValue"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "CustomerCredit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerCredit",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerCredit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerParties",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "ClientId",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "ClientSecret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							},
+							{
+								"key": "BusinessPartner",
+								"value": "{{business_partner}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerParties",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerParties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerSOA",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\",\r\n  \"FromDate\": \"2021-12-01\",\r\n  \"ToDate\": \"2022-02-09\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerSOA",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerSOA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerOutstanding",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\",\r\n  \"KeyDate\": \"2022-02-16\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerOutstanding",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerOutstanding"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerDelSeq",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerDelSeq",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerDelSeq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerCreditDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"disabled": true
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "{{client_secret}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CustomerCode\": \"S10003\",\r\n  \"CompanyCode\": \"RT\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/api/Reports/CustomerCreditDetails",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"api",
+								"Reports",
+								"CustomerCreditDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AuthToken",
+			"item": [
+				{
+					"name": "getAccessToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);\r",
+									"pm.collectionVariables.set(\"access_token\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/{{context}}/oauth2/token",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{context}}",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "access_token",
+			"value": ""
+		}
+	]
+}
